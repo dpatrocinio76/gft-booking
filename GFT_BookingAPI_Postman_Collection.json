@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "88e956c1-93c4-41f3-919f-a54b45fc5889",
+		"name": "GFT Tecnichal Test - Requests to Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26465387"
+	},
+	"item": [
+		{
+			"name": "Create a new Boocking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"Douglas Patrocinio\",\n\"email\":\"douglas@gft.com\",\n\"personalNumber\":\"999.999.999-99\",\n\"city\":\"Belo Horizonte\",\n\"state\":\"Minas Gerais\",\n\"checkinDate\":\"01/03/2024\",\n\"checkoutDate\":\"05/03/2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/booking/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"booking",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all reservations already exists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/booking/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"booking",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT resource to change a booking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"name\":\"Douglas Patrocinio (change booking test)\",\n\"email\":\"douglas@gft.com(change booking test)\",\n\"personalNumber\":\"999.999.999-99(change booking test)\",\n\"city\":\"Belo Horizonte(change booking test)\",\n\"state\":\"Minas Gerais(change booking test)\",\n\"checkinDate\":\"30/04/2024\",\n\"checkoutDate\":\"30/04/2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/booking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"booking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove a booking",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/booking/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"booking",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
