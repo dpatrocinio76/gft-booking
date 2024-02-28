@@ -41,7 +41,7 @@ create database booking_storage
 **Obs.: As tabelas são criadas automaticamente devido a configuração do hibernate na aplicação BookingService, no applicationProperties.xml . Esta configuração também dropa e cria novas tabelas a cada subida do micro serviço BookingService.**
 
 #### **Requisições HTTP via Postman**
-* Está disponibilizado, neste mesmo diretório, um arquivo chamado GFT_BookingAPI_Postman_Collection.json, Tratasse de uma collection de requisições HTTP do Postman para ser importado pela ferramenta e permitir disparar as requisições HTTP aos recursos disponíveis da API BookingAPI. Abaixo uma referência da ferramenta Postman:
+* Está disponibilizado, neste mesmo diretório, um arquivo chamado GFT_BookingAPI_Postman_Collection.json, Trata-se de uma collection de requisições HTTP do Postman para ser importado pela ferramenta e permitir disparar as requisições HTTP aos recursos disponíveis da API BookingAPI. Abaixo uma referência da ferramenta Postman:
   
 https://www.postman.com
 
