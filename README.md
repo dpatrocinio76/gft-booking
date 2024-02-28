@@ -36,12 +36,13 @@ https://dbeaver.io
 #### **Base de dados para persistência das reservas pelo BookingService:**
 * É necessário criar a base de dados via comando SQL, para isso basta executar o comando abaixo no DBeaver por exemplo, ou qualquer outro client de sua preferência:
 
-- create database booking_storage
+create database booking_storage
 
 **Obs.: As tabelas são criadas automaticamente devido a configuração do hibernate na aplicação BookingService, no applicationProperties.xml . Esta configuração também dropa e cria novas tabelas a cada subida do micro serviço BookingService.**
 
 #### **Requisições HTTP via Postman**
-* Está disponibilizado uma collection de requisições HTTP do Postman para ser importado e permitir o acesso aos recursos da API BookingAPI, nome do arquivo: GFT_BookingAPI_Postman_Collection.json. Abaixo uma referência do Postman:
+* Está disponibilizado, neste mesmo diretório, um arquivo chamado GFT_BookingAPI_Postman_Collection.json, Tratasse de uma collection de requisições HTTP do Postman para ser importado pela ferramenta e permitir disparar as requisições HTTP aos recursos disponíveis da API BookingAPI. Abaixo uma referência da ferramenta Postman:
+  
 https://www.postman.com
 
 #### **Instruções para subir todo o eco sistema do Booking:**
