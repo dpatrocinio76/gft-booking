@@ -74,12 +74,12 @@ public class BookingService {
         }
     }
 
-    public List<BookingDTO> getReservations() {
-        List<BookingDTO> listReservations = new ArrayList<>();
+    public List<BookingDTO> getAllBookings() {
+        List<BookingDTO> allBookings = new ArrayList<>();
         bookingRepository.findAll().forEach(item->{
-            listReservations.add(mapBookingEntityToDTO(item));
+            allBookings.add(mapBookingEntityToDTO(item));
         });
-        return listReservations;
+        return allBookings;
     }
 
     public void changeBooking(BookingDTO bookingDTO, Long bookingId) {
@@ -153,4 +153,23 @@ public class BookingService {
 
     }
 
+    public void setFlightExternalBookingWebServiceRepository(FlightExternalBookingWebServiceRepositoryImpl flightExternalBookingWebServiceRepository) {
+        this.flightExternalBookingWebServiceRepository = flightExternalBookingWebServiceRepository;
+    }
+
+    public void setHotelExternalBookingWebServiceRepository(HotelExternalBookingWebServiceRepositoryImpl hotelExternalBookingWebServiceRepository) {
+        this.hotelExternalBookingWebServiceRepository = hotelExternalBookingWebServiceRepository;
+    }
+
+    public void setCarExternalBookingWebServiceRepository(CarExternalBookingWebServiceRepositoryImpl carExternalBookingWebServiceRepository) {
+        this.carExternalBookingWebServiceRepository = carExternalBookingWebServiceRepository;
+    }
+
+    public void setBookingRepository(BookingRepository bookingRepository) {
+        this.bookingRepository = bookingRepository;
+    }
+
+    public void setEmailBookingExternalNotificationService(EmailBookingExternalNotificationService emailBookingExternalNotificationService) {
+        this.emailBookingExternalNotificationService = emailBookingExternalNotificationService;
+    }
 }

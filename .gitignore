@@ -4,3 +4,11 @@
 *.iws
 *.iml
 *.ipr
+/code/BookingApi/target/
+/code/BookingApi/.idea/
+*/code/BookingApi/target/**
+*/code/BookingApi/.idea/**
+/code/BookingService/.idea/
+/code/BookingService/target/
+*/code/BookingService/.idea/**
+*/code/BookingService/target/**

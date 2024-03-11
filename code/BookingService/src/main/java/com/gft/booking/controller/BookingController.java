@@ -17,9 +17,9 @@ public class BookingController {
     @Autowired
     private BookingService bookingService;
 
-    @GetMapping("/reservations")
-    public ResponseEntity<List<BookingDTO>> getReservations(){
-        return ResponseEntity.status(HttpStatus.FOUND).body(bookingService.getReservations());
+    @GetMapping("/all")
+    public ResponseEntity<List<BookingDTO>> getAllBookings(){
+        return ResponseEntity.status(HttpStatus.FOUND).body(bookingService.getAllBookings());
     }
 
     @PutMapping("/{id}")

@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "88e956c1-93c4-41f3-919f-a54b45fc5889",
-		"name": "GFT Tecnichal Test - Requests to Booking API",
+		"_postman_id": "3740727b-62d2-447c-b1f3-79fbb3375538",
+		"name": "Evolution - GFT Tecnichal Test - Requests to Booking API Copy",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "26465387"
 	},
@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8085/api/booking/post",
+					"raw": "http://localhost:8085/api/booking",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -29,8 +29,7 @@
 					"port": "8085",
 					"path": [
 						"api",
-						"booking",
-						"post"
+						"booking"
 					]
 				}
 			},
@@ -42,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8085/api/booking/posts",
+					"raw": "http://localhost:8085/api/booking/all",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -51,7 +50,7 @@
 					"path": [
 						"api",
 						"booking",
-						"posts"
+						"all"
 					]
 				}
 			},
