@@ -41,17 +41,6 @@ class BookingServiceApplicationTests {
 
 	@BeforeEach
 	public void initEach(){
-		Mockito.when(flightExternalBookingWebServiceRepositoryMock.createBookingExternalIntegratedWebService(Mockito.any(BookingDTO.class))).thenReturn(true);
-		Mockito.when(hotelExternalBookingWebServiceRepositoryMock.createBookingExternalIntegratedWebService(Mockito.any(BookingDTO.class))).thenReturn(true);
-		Mockito.when(carExternalBookingWebServiceRepositoryMock.createBookingExternalIntegratedWebService(Mockito.any(BookingDTO.class))).thenReturn(true);
-
-		try {
-			Mockito.doNothing().when(emailBookingExternalNotificationServiceMock).sendNotification(Mockito.any(BookingDTO.class), Mockito.anyString());
-		} catch (EmailExternalBookingNotificationException e) {
-			Assertions.fail("Problem to send notification to user");
-		}
-
-		Mockito.doNothing().when(bookingRepositoryMock).save(Mockito.any(BookingEntity.class));
 
 		BookingService bookingService = new BookingService();
 
@@ -63,6 +52,18 @@ class BookingServiceApplicationTests {
 
 	@Test
 	void bookingServiceCreateBookingBookingsTest() {
+
+		Mockito.when(flightExternalBookingWebServiceRepositoryMock.createBookingExternalIntegratedWebService(Mockito.any(BookingDTO.class))).thenReturn(true);
+		Mockito.when(hotelExternalBookingWebServiceRepositoryMock.createBookingExternalIntegratedWebService(Mockito.any(BookingDTO.class))).thenReturn(true);
+		Mockito.when(carExternalBookingWebServiceRepositoryMock.createBookingExternalIntegratedWebService(Mockito.any(BookingDTO.class))).thenReturn(true);
+
+		try {
+			Mockito.doNothing().when(emailBookingExternalNotificationServiceMock).sendNotification(Mockito.any(BookingDTO.class), Mockito.anyString());
+		} catch (EmailExternalBookingNotificationException e) {
+			Assertions.fail("Problem to send notification to user");
+		}
+
+		Mockito.doNothing().when(bookingRepositoryMock).save(Mockito.any(BookingEntity.class));
 
 		Assertions.assertTrue(true);
 	}
